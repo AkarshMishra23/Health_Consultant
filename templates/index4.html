@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronic Kidney Disease Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style3.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Chronic Kidney Disease Predictor</span></h2>
+
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict3')}}" method="POST"> 
+
+      
+        <label for="Specific Gravity">Specific Gravity</label>
+        <input type="text" id="first" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" required="required"><br>
+
+		<label for="Hyper Tension">Hyper Tension</label>
+        <input type="text" id="second" name="htn" placeholder="Yes = 1, No=0" required="required"><br>
+
+		<label for="Hemoglobin">Hemoglobin</label>
+        <input type="text" id="third" name="hemo" placeholder="in gms" required="required" ><br>
+
+		<label for="Diabetes Mellitus">Diabetes Mellitus</label>
+        <input type="text"  id="fourth" name="dm" placeholder="Yes = 1, No=0" required="required"> <br>
+
+		<label for="Albumin">Albumin</label>
+        <input type="text" id="fifth" name="al" placeholder="(0,1,2,3,4,5)" required="required"> <br>
+
+		<label for="Appetite">Appetite</label>
+        <input type="text"  id="sixth" name="appet" placeholder="Good = 1, Poor = 0" required="required"><br>
+
+		<label for="Red Blood Cell">Red Blood Cell </label>
+        <input type="text" id="seventh" name="rc" placeholder="in Millions/cmm" required="required"> <br>
+
+		<label for="Pus Cell">Pus Cell</label>
+        <input type="text"id="eight" name="pc" placeholder="Normal = 0, Abnormal = 1" required="required"> <br>
+
+
+
+
+
+      
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+
+
+</body>
+
+</html>

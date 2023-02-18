@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style3.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
+
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict1')}}" method="POST"> 
+
+      
+        <label for="Number of Pregnancies">Number of Pregnancies</label>
+        <input type="text" id="pregnancies" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+
+		<label for="Glucose(mg/dL)">Glucose(mg/dL)</label>
+        <input type="text" id="glucose" name="glucose" placeholder="Glucose(mg/dL) eg. 80"><br>
+
+		<label for="Blood Pressure (mmHg)">Blood Pressure (mmHg)</label>
+        <input type="text" id="bloodpressure" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+
+		<label for="Skin Thickness (mm)">Skin Thickness (mm)</label>
+        <input type="text" id="skinthickness" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+
+		<label for="Insulin Level (IU/mL)">Insulin Level(IU/mL)</label>
+        <input type="text" id="insulin" name="insulin" placeholder="Insulin Level(IU/mL) eg. 80"><br>
+
+		<label for="Body Mass Index (kg/m²)">Body Mass Index (kg/m²)</label>
+        <input type="text" id="bmi" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+
+		<label for="Diabetes Pedigree Function">Diabetes Pedigree Function </label>
+        <input type="text" id="dpf" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+
+		<label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Age (years) eg. 34"><br>
+
+
+
+
+
+      
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+
+
+</body>
+
+</html>
